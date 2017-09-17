@@ -61,6 +61,18 @@
     <MonoGameContentReference Include="Content\Content.mgcb" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="..\ProgrammingAssignment3Content\bin\graphics\greenrock.xnb">
+      <Link>Content\graphics\greenrock.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\ProgrammingAssignment3Content\bin\graphics\magentarock.xnb">
+      <Link>Content\graphics\magentarock.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\ProgrammingAssignment3Content\bin\graphics\whiterock.xnb">
+      <Link>Content\graphics\whiterock.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="app.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
