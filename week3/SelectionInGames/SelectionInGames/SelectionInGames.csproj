@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{DBCC6305-8C87-4E6F-BAC5-DFB18AEF230A}</ProjectGuid>
+    <ProjectGuid>{A8673275-97E2-4A20-B069-C9EEC11276A4}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MovingTeddyBears</RootNamespace>
-    <AssemblyName>MovingTeddyBears</AssemblyName>
+    <RootNamespace>SelectionInGames</RootNamespace>
+    <AssemblyName>SelectionInGames</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MonoGamePlatform>Windows</MonoGamePlatform>
     <MonoGameContentBuilderExe>
@@ -27,7 +27,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <Prefer32Bit>false</Prefer32Bit>
-    <DocumentationFile>bin\Windows\Debug\MovingTeddyBears.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
     <PlatformTarget>x86</PlatformTarget>
@@ -43,6 +42,7 @@
     <ApplicationIcon>Icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Explosion.cs" />
     <Compile Include="Game1.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -62,16 +62,16 @@
     <MonoGameContentReference Include="Content\Content.mgcb" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="..\MovingTeddyBearsContent\bin\graphics\teddybear0.xnb">
+    <Content Include="..\SelectionInGamesContent\bin\graphics\explosion.xnb">
+      <Link>Content\graphics\explosion.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\SelectionInGamesContent\bin\graphics\teddybear0.xnb">
       <Link>Content\graphics\teddybear0.xnb</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="..\MovingTeddyBearsContent\bin\graphics\teddybear1.xnb">
+    <Content Include="..\SelectionInGamesContent\bin\graphics\teddybear1.xnb">
       <Link>Content\graphics\teddybear1.xnb</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="..\MovingTeddyBearsContent\bin\graphics\teddybear2.xnb">
-      <Link>Content\graphics\teddybear2.xnb</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
