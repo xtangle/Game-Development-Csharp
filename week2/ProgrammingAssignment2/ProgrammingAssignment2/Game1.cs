@@ -26,7 +26,7 @@ namespace ProgrammingAssignment2
         // STUDENTS: declare variables for x and y speeds
         const int MaxSpeedX = 4;
         const int MaxSpeedY = 4;
-        int vx, vy;
+        int velocityX, velocityY;
 
         // used to handle generating random values
         Random rand = new Random();
@@ -121,13 +121,13 @@ namespace ProgrammingAssignment2
                 // STUDENTS: write code below to generate random numbers between -4 and 4 inclusive for the x and y speed 
                 // using the rand field I provided
                 // CAUTION: Don't redeclare the x speed and y speed variables here!
-                vx = rand.Next(-MaxSpeedX, MaxSpeedX + 1);
-                vy = rand.Next(-MaxSpeedY, MaxSpeedY + 1);
+                velocityX = rand.Next(-MaxSpeedX, MaxSpeedX + 1);
+                velocityY = rand.Next(-MaxSpeedY, MaxSpeedY + 1);
             }
 
             // STUDENTS: move the drawRectangle by the x speed and the y speed
-            drawRectangle.X = drawRectangle.X + vx;
-            drawRectangle.Y = drawRectangle.Y + vy;
+            drawRectangle.X = drawRectangle.X + velocityX;
+            drawRectangle.Y = drawRectangle.Y + velocityY;
 
             base.Update(gameTime);
         }
