@@ -26,7 +26,8 @@ namespace ProgrammingAssignment2
         // STUDENTS: declare variables for x and y speeds
         const int MaxSpeedX = 4;
         const int MaxSpeedY = 4;
-        int velocityX, velocityY;
+        int velocityX = 0;
+        int velocityY = 0;
 
         // used to handle generating random values
         Random rand = new Random();
@@ -126,8 +127,8 @@ namespace ProgrammingAssignment2
             }
 
             // STUDENTS: move the drawRectangle by the x speed and the y speed
-            drawRectangle.X = drawRectangle.X + velocityX;
-            drawRectangle.Y = drawRectangle.Y + velocityY;
+            drawRectangle.X += velocityX;
+            drawRectangle.Y += velocityY;
 
             base.Update(gameTime);
         }
