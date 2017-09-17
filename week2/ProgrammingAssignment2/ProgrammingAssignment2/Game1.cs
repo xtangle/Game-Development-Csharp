@@ -6,6 +6,11 @@ using Microsoft.Xna.Framework.Input;
 using System.Collections.Generic;
 using System.Linq;
 
+/// <summary>
+/// Programming assignment 2
+/// This program displays a random sprite that starts in the center of the window and moves with a random x and y speed. 
+/// Approximately each second, a new random sprite with random x and y speeds will be generated at the center of the window.
+/// </summary>
 namespace ProgrammingAssignment2
 {
     /// <summary>
@@ -103,7 +108,7 @@ namespace ProgrammingAssignment2
 
                 // STUDENTS: uncomment the code below and make it generate a random number 
                 // between 0 and 2 inclusive using the rand field I provided
-                int spriteNumber = rand.Next(0, NumberOfSprites);
+                int spriteNumber = rand.Next(NumberOfSprites);
 
                 // sets current sprite
                 // STUDENTS: uncomment the lines below and change sprite0, sprite1, and sprite2
