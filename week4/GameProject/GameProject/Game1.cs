@@ -88,6 +88,9 @@ namespace GameProject
             // load projectile and explosion sprites
 
             // add initial game objects
+            burger = new Burger(Content, "graphics/burger",
+                GameConstants.WindowWidth / 2, GameConstants.WindowHeight * 7 / 8, null);
+            SpawnBear();
 
             // set initial health and score strings
         }
@@ -155,7 +158,7 @@ namespace GameProject
             spriteBatch.Begin();
 
             // draw game objects
-            //burger.Draw(spriteBatch);
+            burger.Draw(spriteBatch);
             foreach (TeddyBear bear in bears)
             {
                 bear.Draw(spriteBatch);
@@ -208,15 +211,21 @@ namespace GameProject
         private void SpawnBear()
         {
             // generate random location
+            int locationX = GetRandomLocation(GameConstants.SpawnBorderSize, GameConstants.WindowWidth - 2 * GameConstants.SpawnBorderSize);
+            int locationY = GetRandomLocation(GameConstants.SpawnBorderSize, GameConstants.WindowHeight - 2 * GameConstants.SpawnBorderSize);
 
             // generate random velocity
+            float speed = GameConstants.MinBearSpeed + RandomNumberGenerator.NextFloat(GameConstants.BearSpeedRange);
+            float angle = RandomNumberGenerator.NextFloat((float)Math.PI);
+            Vector2 velocity = new Vector2((float)Math.Cos(angle) * speed, (float)Math.Sin(angle) * speed);
 
             // create new bear
+            TeddyBear newBear = new TeddyBear(Content, "graphics/teddybear", locationX, locationY, velocity, null, null);
 
             // make sure we don't spawn into a collision
 
             // add new bear to list
-
+            bears.Add(newBear);
         }
 
         /// <summary>
